@@ -11,6 +11,7 @@
 
   <!-- NavBAr -->
   <nav>
+    <a href="index.html" class="nav-logo">Silvia Maggiori</a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="materieTeniche.html">Materie Tecniche</a></li>
@@ -21,7 +22,24 @@
       <li><a href="progetti.html">Progetti</a></li>
       <li><a href="cv.html">Certificazioni & CV</a></li>
     </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
+
+  <!-- Menu Mobile -->
+  <div class="nav-mobile-overlay" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="materieTeniche.html">Materie Tecniche</a>
+    <a href="materieUmanistiche.html" class="active">Materie Umanistiche</a>
+    <a href="hobby.html">Hobby</a>
+    <a href="edcivica.html">Ed. Civica</a>
+    <a href="FSL.html">FSL</a>
+    <a href="progetti.html">Progetti</a>
+    <a href="cv.html">Certificazioni &amp; CV</a>
+  </div>
 
   <!-- Titolo -->
   <header class="page-header">
@@ -180,6 +198,15 @@
       &copy; 2026 Silvia Maggiori. Tutti i diritti riservati.
     </div>
   </footer>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileNav');
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+  </script>
 
 </body>
 </html>
