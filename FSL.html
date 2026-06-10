@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FSL - Il Mio Percorso nel Web Design</title>
+  <title>PCTO - Il Mio Percorso nel Web Design</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stile/style.css">
 </head>
@@ -11,6 +11,7 @@
 
   <!-- NavBar-->
   <nav>
+    <a href="index.html" class="nav-logo">Silvia Maggiori</a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="materieTeniche.html">Materie Tecniche</a></li>
@@ -21,7 +22,24 @@
       <li><a href="progetti.html">Progetti</a></li>
       <li><a href="cv.html">Certificazioni & CV</a></li>
     </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
+
+  <!-- Menu Mobile -->
+  <div class="nav-mobile-overlay" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="materieTeniche.html">Materie Tecniche</a>
+    <a href="materieUmanistiche.html">Materie Umanistiche</a>
+    <a href="hobby.html">Hobby</a>
+    <a href="edcivica.html">Ed. Civica</a>
+    <a href="FSL.html" class="active">FSL</a>
+    <a href="progetti.html">Progetti</a>
+    <a href="cv.html">Certificazioni &amp; CV</a>
+  </div>
 
   <!-- Titolo  -->
   <header class="page-header">
@@ -99,7 +117,7 @@
         <div style="margin-top: 25px;">
           <a href="documenti/SchoolWorkExperience_MaggioriSilvia5am (2)_compressed.pdf"
             target="_blank" class="pcto-button" download>
-            📂 Scarica Relazione Fsl (PDF in inglese)
+            📂 Scarica Relazione PCTO (PDF in inglese)
           </a>
         </div>
       </div>
@@ -131,6 +149,15 @@
       &copy; 2026 Silvia Maggiori. Tutti i diritti riservati.
     </div>
   </footer>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileNav');
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+  </script>
 
 </body>
 </html>
