@@ -39,7 +39,7 @@ body {
   flex-direction: column;
 }
 
-/* ===== NAVBAR ===== */
+/* NavBAr */
 nav {
   background-color: var(--plum-dark); 
   padding: 0 40px; 
@@ -426,26 +426,50 @@ footer {
   letter-spacing: 0.5px;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
+
+/* --- Tablet largo: 1120px --- */
 @media (max-width: 1120px) {
   .hero {
-    gap: 40px; 
+    gap: 40px;
+    padding: 50px 30px;
   }
   .profile-image-round {
-    width: 300px; 
+    width: 300px;
     height: 300px;
   }
   .photo-container {
     flex: 0 0 320px;
   }
+  .profile-card {
+    padding: 45px 45px;
+  }
+  .profile-name {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+  }
 }
 
+/* --- Tablet: 850px --- */
 @media (max-width: 850px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+
+  .nav-links a {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
   .hero {
-    flex-direction: column; 
-    text-align: center; 
-    gap: 30px;
+    flex-direction: column;
+    text-align: center;
+    gap: 28px;
     padding: 40px 20px;
+    min-height: auto;
   }
 
   .photo-container {
@@ -453,47 +477,76 @@ footer {
   }
 
   .profile-image-round {
-    width: 220px; 
-    height: 220px; 
+    width: 200px;
+    height: 200px;
   }
 
   .profile-card {
     width: 100%;
-    padding: 40px 25px; 
+    padding: 35px 28px;
   }
 
   .profile-info {
-    align-items: center; 
-    text-align: center;
-  }
-
-  .profile-name {
-    font-size: 2.5rem; 
-  }
-
-  /* Compattamento moduli card per mobile */
-  .pcto-card, .pcto-card.reverse, .hobby-card, .hobby-card.reverse {
-    flex-direction: column; 
-  }
-
-  .pcto-image-wrapper, .hobby-image-wrapper, .pcto-map-wrapper {
-    flex: 0 0 250px;
-    width: 100%;
-  }
-
-  .pcto-content, .hobby-content {
-    padding: 30px 25px;
     align-items: center;
     text-align: center;
   }
 
-  .page-title {
-    font-size: 2.3rem;
+  .profile-name {
+    font-size: clamp(1.8rem, 6vw, 2.6rem);
   }
 
+  .description-heading {
+    font-size: 1.4rem;
+  }
+
+  .profile-desc {
+    font-size: 1.05rem;
+  }
+
+  /* Card PCTO / Hobby */
+  .pcto-card,
+  .pcto-card.reverse,
+  .hobby-card,
+  .hobby-card.reverse {
+    flex-direction: column;
+  }
+
+  .pcto-image-wrapper,
+  .hobby-image-wrapper,
+  .pcto-map-wrapper {
+    flex: 0 0 240px;
+    width: 100%;
+  }
+
+  .pcto-content,
+  .hobby-content {
+    padding: 30px 24px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pcto-name,
+  .hobby-name {
+    font-size: 1.6rem;
+  }
+
+  /* Sezioni */
+  .page-header {
+    padding: 40px 20px 15px;
+  }
+
+  .page-title {
+    font-size: clamp(1.8rem, 6vw, 2.3rem);
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Footer */
   .footer-container {
     flex-direction: column;
-    gap: 20px; 
+    gap: 20px;
     text-align: center;
   }
 
@@ -508,4 +561,144 @@ footer {
   .footer-column h4 {
     margin-bottom: 15px;
   }
+}
+
+/* --- Mobile: 480px --- */
+@media (max-width: 480px) {
+  nav {
+    padding: 0 14px;
+    height: 56px;
+  }
+
+  .nav-logo {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 2px;
+  }
+
+  .nav-links a {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+    letter-spacing: 0;
+  }
+
+  .hero {
+    gap: 22px;
+    padding: 30px 16px;
+  }
+
+  .profile-image-round {
+    width: 160px;
+    height: 160px;
+    border-width: 4px;
+  }
+
+  .profile-card {
+    padding: 28px 20px;
+    border-radius: 18px;
+  }
+
+  .profile-name {
+    font-size: clamp(1.6rem, 8vw, 2rem);
+  }
+
+  .profile-subtitle {
+    font-size: 0.82rem;
+    letter-spacing: 1.5px;
+  }
+
+  .description-heading {
+    font-size: 1.25rem;
+  }
+
+  .profile-desc {
+    font-size: 0.97rem;
+    line-height: 1.65;
+  }
+
+  .profile-badge {
+    font-size: 0.85rem;
+    padding: 7px 16px;
+  }
+
+  /* Card PCTO / Hobby */
+  .pcto-image-wrapper,
+  .hobby-image-wrapper,
+  .pcto-map-wrapper {
+    flex: 0 0 200px;
+  }
+
+  .pcto-content,
+  .hobby-content {
+    padding: 22px 18px;
+  }
+
+  .pcto-name,
+  .hobby-name {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+  }
+
+  .pcto-desc,
+  .hobby-desc {
+    font-size: 0.97rem;
+  }
+
+  .pcto-badge,
+  .hobby-badge {
+    font-size: 0.78rem;
+    padding: 3px 11px;
+  }
+
+  .pcto-container,
+  .hobby-container {
+    padding: 20px 14px 60px;
+    gap: 28px;
+  }
+
+  /* Sezioni */
+  .page-title {
+    font-size: clamp(1.5rem, 7vw, 1.9rem);
+  }
+
+  .page-subtitle {
+    font-size: 0.92rem;
+  }
+
+  .divider-center {
+    width: 70px;
+    height: 3px;
+    margin-top: 14px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 22px 16px 10px;
+  }
+
+  .footer-column.bio h3 {
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+  }
+
+  .footer-column.bio p {
+    font-size: 0.85rem;
+  }
+
+  .footer-column h4 {
+    font-size: 0.75rem;
+    margin-bottom: 12px;
+  }
+
+  .footer-column.contacts li {
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.72rem;
+    margin-top: 12px;
+  }
+}
 }
