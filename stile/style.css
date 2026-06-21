@@ -584,12 +584,12 @@ footer {
   .footer-column h4 {
     margin-bottom: 15px;
   }
-  .pcto-image-wrapper, .hobby-image-wrapper, .pcto-map-wrapper {
+/* Gestione Immagini all'interno dei box */
+.pcto-image-wrapper, .hobby-image-wrapper, .pcto-map-wrapper {
   flex: 0 0 400px; 
   min-height: 300px;
   background-color: var(--lavender-mist);
   overflow: hidden;
-  position: relative; 
 }
   .pcto-map-wrapper iframe {
   position: absolute;
